@@ -1,7 +1,27 @@
-<h1><%= @post.title %></h1>
-<h3>Posted on <%= @post.post_date %></h3>
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url(../assets/post-bg.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1><%= @post.title %></h1>
+          <span class="meta">Posted on <%= render_datetime(@post.post_date) %></span>
+        </div>
+      </div>
+      </div>
+  </div>
+</header>
 
-<p><%= @post.content %></p>
+    <!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <%= @post.content %>
+      </div>
+    </div>
+  </div>
+</article>
+<hr>
 
-<%= link_to "edit", edit_post_path(@post)  %>
-<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure?"}  %>

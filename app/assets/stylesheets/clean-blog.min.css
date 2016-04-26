@@ -118,8 +118,7 @@ hr.small {
 		transform:translate3d(0,100%,0)
 	}
 }
-.intro-header {
-	background-image: url(home-bg.jpg); 
+.intro-header { 
 	background-attachment: scroll;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
