@@ -1,0 +1,9 @@
+<%= link_to "New Post", new_post_path  %>
+
+<ul>
+	<% @posts.each do |post| %>
+	<li><h1><%= post.title %></h1></li>
+	<li><%= post.content %></li>
+	<li>posted on <%= post.post_date  %></li>
+	<% end %>
+</ul>
