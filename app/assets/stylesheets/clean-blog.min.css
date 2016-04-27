@@ -6,13 +6,13 @@
 
 body {
 	font-family: Lora,'Times New Roman',serif;
-	font-size: 20px;
 	color: #404040;
 }
 
 p {
-	line-height:1.5;
-	margin:30px 0;
+	font-family: Lora,'Times New Roman',serif;
+  line-height:1.5;
+  font-size: 20px;
 }
 
 p a {
@@ -56,6 +56,10 @@ hr.small {
 	z-index: 3;
 	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
+.navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+}
 
 .navbar-custom .navbar-brand {
 	font-weight:800
@@ -84,7 +88,8 @@ hr.small {
 	}
 
 	.navbar-custom .nav li a{
-				color:#fff;padding:20px
+				color: #60604B;
+				padding:20px
 	}
 
 	.navbar-custom .nav li a:hover,.navbar-custom .nav li a:focus {
@@ -161,7 +166,7 @@ hr.small {
 	}
 }
 
-.intro-header .site-heading,.intro-header .page-heading {
+.intro-header .site-heading,.intro-header .page-heading, .intro-header .post-heading {
 	text-align: center
 }
 
@@ -170,7 +175,7 @@ hr.small {
 	font-size: 50px;
 }
 
-.intro-header .site-heading .subheading,.intro-header .page-heading .subheading {
+.intro-header .site-heading .subheading,.intro-header .page-heading .subheading, .intro-header .post-heading .subheading {
 	font-size: 24px;
 	line-height: 1.1;
 	display: block;
@@ -232,6 +237,7 @@ color: #404040
 
 .post-preview > a > .post-title {
 	font-size: 30px;
+	font-weight: 800;
 	margin-top: 30px;
 	margin-bottom: 10px
 }
@@ -361,7 +367,7 @@ form .row: first-child .floating-label-form-group {
 	padding: 25px 35px
 }
 
-.btn-default:hover,.btn-default:focus {
+.btn-custom:hover,.btn-custom:focus {
 	background-color: #0085a1;
 	border: 1px solid #0085a1;
 	color: #fff
@@ -421,4 +427,6 @@ img::-moz-selection{
 body {
 	webkit-tap-highlight-color: #0085a1
 }
-
+#about_me {
+	text-indent: 2.5em;
+}

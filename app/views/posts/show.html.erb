@@ -1,3 +1,5 @@
+
+
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
 <header class="intro-header" style="background-image: url(../assets/post-bg.jpg)">
@@ -5,23 +7,25 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1><%= @post.title %></h1>
-          <span class="meta">Posted on <%= render_datetime(@post.post_date) %></span>
-        </div>
+          <h1>Write down my story of life and everything</h1>
+          <h2 class="subheading">Be a good rails developer, wherever I fall</h2>
+          <span class="meta">This post was completed on <%= render_datetime(@post.post_date) %></span>
+         </div>
       </div>
-      </div>
+    </div>
   </div>
 </header>
 
-    <!-- Post Content -->
+<!-- Post Content -->
 <article>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <%= @post.content %>
+        <h3><%= @post.title %></h3>
+        <p><%= @post.content %></p>
       </div>
     </div>
   </div>
 </article>
-<hr>
 
+<hr>
