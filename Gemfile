@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 
-
+gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'awesome_rails_console'
