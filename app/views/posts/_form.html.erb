@@ -7,9 +7,10 @@
 		<%= f.input :content, row: 10 %>
 	</div>
 	<div class="form-group">
-	  <%= f.input :post_date %>
+		<%= f.label "Select Date"  %> <br>
+	  <%= f.text_field :post_date, placeholder: "YY-MM-DD" %>
 	</div>
 	
-	<%= f.submit class:"btn btn-default" %>
+	<%= f.submit class:"btn btn-default btn-sm" %>
 
 <% end %>

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require bootstrap-sprockets
 //= require_tree .
 
@@ -21,4 +22,9 @@ $(document).ready(function(){
     event.preventDefault();
     alert("I don't have twitter account, haha~");
   });
+	$(function(){
+	  $('#post_post_date').datepicker({
+	  dateFormat: 'yy-mm-dd'
+	});
+	});
 });

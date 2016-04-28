@@ -13,27 +13,27 @@
   </div>
 </header>
 
-    <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-preview">
-          <% @posts.each do |post| %>
-            <a href=<%= post_path(post) %>><h2 class="post-title"><%= post.title %></h2></a>
-            <h3 class="post-subtitle"><%= truncate(post.content, length: 50) %></h3>
-            <p class="post-meta">Posted by <%= link_to "Bill Hung", "#"  %> on <%= render_datetime(post.post_date) %></p>
-          <% end %>
-        </div>
-        <hr>
-        
-        <!-- Pager -->
-        <ul class="pager">
-          <li class="next">
-            <a href="#">Older Posts &rarr;</a>
-          </li>
-        </ul>
+  <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="post-preview">
+        <% @posts.each do |post| %>
+          <a href=<%= post_path(post) %>><h2 class="post-title"><%= post.title %></h2></a>
+          <h3 class="post-subtitle"><%= truncate(post.content, length: 50) %></h3>
+          <p class="post-meta">Posted by <%= link_to "Bill Hung", "#"  %> on <%= render_datetime(post.post_date) %></p>
+        <% end %>
       </div>
+      <hr>
+      
+      <!-- Pager -->
+      <ul class="pager">
+        <li class="next">
+          <a href="#">Older Posts &rarr;</a>
+        </li>
+      </ul>
     </div>
   </div>
+</div>
 <hr>
 

@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
 
-
 gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.3.6'
-
+gem 'jquery-ui-rails'
 gem 'awesome_rails_console'
 gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
