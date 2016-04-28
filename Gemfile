@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'mail_form'
 gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-ui-rails'
