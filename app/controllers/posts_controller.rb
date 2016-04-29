@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 
 		if @post.save
-			redirect_to @post
+			redirect_to @post, notice: "New post is created successfully!"
 		else
 			render :new
 		end
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 
 	def update
 		if @post.update(post_params)
-			redirect_to @post
+			redirect_to @post, notice: "Your post is updated successfully!"
 		else
 			render :edit
 		end
