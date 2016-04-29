@@ -25,6 +25,16 @@ $(document).ready(function(){
 	$(function(){
 	  $('#post_post_date').datepicker({
 	  dateFormat: 'yy-mm-dd'
+		});
 	});
+	$("#weight, #height").keyup(function(){
+    var weight= $("#weight").val();
+    var height= $("#height").val();
+    var bmi = weight/(height/100*height/100);
+    $("#bmi").val(bmi.toFixed(2));
+	});
+	$("#submit_bmi").on('click', function(){
+		var bmi = $("#bmi").val();
+		alert('Hey! Your BMI is ' + bmi)
 	});
 });

@@ -1,0 +1,34 @@
+<header class="intro-header" style="background-image: url(../assets/my_bmi.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>My BMI </h1>
+          <hr class="small">
+          <span class="subheading">Calculate Your and Mine BMI Any Time </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="bmi_form container">
+	<div class="row">
+		<div class="col-md-4 col-xs-8 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<%= form_tag myBMI_url, method: :get do %>
+						<%= label_tag	'height', 'My Height :' %>
+						<%= number_field_tag 'height' %><span> CM</span> <br> <br>
+						<%= label_tag	'weight', 'My Weight :' %>
+						<%= number_field_tag 'weight' %><span> KG</span> <br> <br>
+						<%= label_tag 'bmi', 'My BMI :' %>
+						<%= text_field_tag 'bmi' %> <br> <br>
+						<%= submit_tag "Submit", class: "btn btn-default btn-xs", id: "submit_bmi" %>
+					<% end %>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<br><hr>
