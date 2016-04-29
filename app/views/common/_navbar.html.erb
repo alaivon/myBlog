@@ -11,11 +11,17 @@
       </button>
       <a class="navbar-brand" href="/">BILL's Blog</a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "New Post", new_post_path  %></li>
+      <li>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Select Category<b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "New Post", new_post_path  %></li>
+          <li><a href="#">BMI</a></li>
+        </ul>
+      </li>
         <li>
             <%= link_to "Home", home_path  %>
         </li>
@@ -27,7 +33,5 @@
         </li>
       </ul>
     </div>
-      <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container -->
 </nav>
