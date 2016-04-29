@@ -2,8 +2,12 @@ class PostsController < ApplicationController
 
 	before_action :find_post, only: [:edit, :show, :update, :destroy]
 
+	def home
+		@posts = Post.all.order('post_date DESC')
+	end
+
 	def index
-		@posts = Post.all
+		@posts = Post.all.order('post_date DESC')
 	end
 
 	def show

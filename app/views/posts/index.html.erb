@@ -1,39 +1,16 @@
-
-<header class="intro-header" style="background-image: url(../assets/home-bg.jpg);">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="site-heading">
-          <h1>Try Hard, Keep Learning</h1>
-          <hr class="small">
-          <span class="subheading">Welcome to my blog, This is a place I can record my BMI & cash flow </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-  <!-- Main Content -->
+<br>
+<br>
+<br>
 <div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="post-preview">
+	<div class="row">
+  	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<div class="post-preview">
         <% @posts.each do |post| %>
           <a href=<%= post_path(post) %>><h2 class="post-title"><%= post.title %></h2></a>
           <h3 class="post-subtitle"><%= truncate(post.content, length: 50) %></h3>
-          <p class="post-meta">Posted by <%= link_to "Bill Hung", "#"  %> on <%= render_datetime(post.post_date) %></p>
+          <p class="post-meta">Posted by <%= link_to "Bill Hung", "#"  %> on <%= render_datetime(post.post_date) %></p> <hr>	
         <% end %>
       </div>
-      <hr>
-      
-      <!-- Pager -->
-      <ul class="pager">
-        <li class="next">
-          <a href="#">Older Posts &rarr;</a>
-        </li>
-      </ul>
     </div>
   </div>
 </div>
-<hr>
-
