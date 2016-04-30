@@ -21,3 +21,13 @@
 h2.post-title {
 	color: #9090C7;
 }
+
+#clickme a {
+	text-decoration: none;
+	color: #010C0E;
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	&:hover {
+		color: white;
+		font-weight: bold;
+	}
+}

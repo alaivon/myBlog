@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426094840) do
+ActiveRecord::Schema.define(version: 20160430080948) do
+
+  create_table "catalogs", force: :cascade do |t|
+    t.string   "kind"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -20,5 +26,16 @@ ActiveRecord::Schema.define(version: 20160426094840) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "records", force: :cascade do |t|
+    t.integer  "amount"
+    t.date     "period"
+    t.string   "details"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "catalog_id"
+  end
+
+  add_index "records", ["catalog_id"], name: "index_records_on_catalog_id"
 
 end

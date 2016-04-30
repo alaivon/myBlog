@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   get 'myBMI' => 'actions#my_bmi'
   resources :contacts, only: [:new, :create]
   root 'posts#home'
+  resources :records do
+    collection do
+      get 'main' => 'records#main'
+    end
+  end
   # Serve websocket cable requests in-process
   # mount ActionCable.server => '/cable'
 end

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bill's Blog</title>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+     <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <header class="intro-header" style="background-image: url(../assets/accounting.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Where's Cash</h1>
+          <hr class="small">
+          <span class="subheading">Accounting, Saving and Investing!</span> <br>
+          <p id="clickme"> <%= link_to "Click Me to Figure Out", new_record_path  %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <%= render 'common/navbar' %>
+    <% if notice %>
+      <div class="notice">
+          <p id="notice"><%= notice %></p>
+      </div>
+      
+    <% end %>
+    <%= yield %>
+    <%= render 'common/footer' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
+<script>
+  $(document).ready(function(){
+    setTimeout(function() {
+      $('.notice').fadeOut("slow", function() {
+        $this.remove();
+      });
+    }, 1500 );
+  });
+</script>
+
+</html>

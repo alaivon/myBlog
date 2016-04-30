@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+puts "creating type...."
+kind = ["Expense", "Revenue"]
+kind.each do |kind|
+	Catalog.create(kind: kind)
+end
