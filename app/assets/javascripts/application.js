@@ -34,7 +34,11 @@ $(document).ready(function(){
     $("#bmi").val(bmi.toFixed(2));
 	});
 	$("#submit_bmi").on('click', function(){
-		var bmi = $("#bmi").val();
+		var bmi = +$("#bmi").val();
+		if (isNaN(bmi)) {
+		alert('Hey! You have to enter number.')
+		} else {	
 		alert('Hey! Your BMI is ' + bmi)
+		}
 	});
 });
