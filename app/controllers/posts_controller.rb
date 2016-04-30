@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 	before_action :find_post, only: [:edit, :show, :update, :destroy]
 
 	def home
-		@posts = Post.all.order('post_date DESC')
+		@posts = Post.all.order('post_date DESC').limit(3)
 	end
 
 	def index
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 
 		if @post.save
-			redirect_to @post, notice: "New post is created successfully!"
+			redirect_to post_path(@post.title), notice: "New post is created successfully!"
 		else
 			render :new
 		end
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
 
 	def update
 		if @post.update(post_params)
-			redirect_to @post, notice: "Your post is updated successfully!"
+			redirect_to post_path(@post.title), notice: "Your post is updated successfully!"
 		else
 			render :edit
 		end
@@ -52,8 +52,6 @@ class PostsController < ApplicationController
 	end
 
 	def find_post
-		@post = Post.find(params[:id])
+		@post = Post.find_by_title(params[:id])
 	end
-
-
 end

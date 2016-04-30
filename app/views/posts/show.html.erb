@@ -9,7 +9,7 @@
         <div class="post-heading">
           <h1>Write down my story of life and everything</h1>
           <h2 class="subheading">Be a good rails developer, wherever I fall</h2>
-          <span class="meta">This post was completed on <%= render_datetime(@post.post_date) %></span>
+          <span class="meta">This post was completed on <%= @post.post_date %></span>
          </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <h3><%= @post.title %> | <%= link_to "Edit", edit_post_path(@post)  %></h3>
+        <h3><%= @post.title %> | <%= link_to "Edit", edit_post_path(@post.title)  %></h3>
         <p><%= simple_format(@post.content) %></p>
       </div>
     </div>
