@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	rescue_from NoMethodError, with: :invalid_url
 
 	before_action :find_post, only: [:edit, :show, :update, :destroy]
 
@@ -46,6 +47,13 @@ class PostsController < ApplicationController
 	end
 
 	private
+
+	def invalid_url
+		logger.error "Attempt to access invalid url" 
+		redirect_to root_url, notice: 'Not A Valid URL'
+		
+	end
+
 
 	def post_params
 		params.require(:post).permit(:title, :content, :post_date)
