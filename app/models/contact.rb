@@ -6,8 +6,8 @@ class Contact < MailForm::Base
    def headers
    	 {
       subject: "Message from Bill's Blog",
-      to: "alanivon8@gmail.com",
-      from: %("#{name}" < #{email})  # %代替雙引號字串，因字串裡有很多雙引號
+      to: "kinglin814@gmail.com",
+      from:  %("#{name}" <#{email}>)  # %代替雙引號字串，因字串裡有很多雙引號
     }
    end
 end
