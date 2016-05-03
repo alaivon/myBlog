@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-config.action_mailer.default_url_options = {host: 'https://billblog2016.herokuapp.com'} #Your App Domain 
+config.action_mailer.default_url_options = {host: 'http://billblog2016.herokuapp.com'} #Your App Domain 
 
 config.action_mailer.delivery_method = :smtp
 
