@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+gem 'pygments.rb', '~> 0.6.3'
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'mail_form'
 gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.3.6'

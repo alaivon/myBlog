@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	rescue_from NoMethodError, with: :invalid_url
+	# rescue_from NoMethodError, with: :invalid_url
 
 	before_action :find_post, only: [:edit, :show, :update, :destroy]
 
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 
 		if @post.save
-			redirect_to post_path(@post.title), notice: "New post is created successfully!"
+			redirect_to @post, notice: "New post is created successfully!"
 		else
 			render :new
 		end
@@ -35,9 +35,9 @@ class PostsController < ApplicationController
 
 	def update
 		if @post.update(post_params)
-			redirect_to post_path(@post.title), notice: "Your post is updated successfully!"
+			redirect_to @post, notice: "Your post is updated successfully!"
 		else
-			render :edit
+			render edit
 		end
 	end
 
@@ -60,6 +60,6 @@ class PostsController < ApplicationController
 	end
 
 	def find_post
-		@post = Post.find_by_title(params[:id])
+		@post = Post.find(params[:id])
 	end
 end
