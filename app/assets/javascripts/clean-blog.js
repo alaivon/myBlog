@@ -25,7 +25,7 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
-
+        },
         filter: function() {
             return $(this).is(":visible");
         },
@@ -39,7 +39,9 @@ $(function() {
 
 
 /*When clicking on Full hide fail/success boxes */
-
+$('#name').focus(function() {
+    $('#success').html('');
+});
 
  // jqBootstrapValidation
  // * A plugin for automating validation on Twitter Bootstrap formatted forms.
