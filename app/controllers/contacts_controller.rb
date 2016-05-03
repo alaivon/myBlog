@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
 
 	def create
 		@contact = Contact.new(params[:contact])
-		@contact.requset = requset
+		@contact.request = request
 		if @contact.deliver
 			flash[:now] = nil
 		else
