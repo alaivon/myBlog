@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+
+gem "babosa"
 gem 'friendly_id', '~> 5.1.0'
 gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
