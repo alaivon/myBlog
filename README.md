@@ -48,7 +48,8 @@ Hi, I'm Bill, this is one of projects for my exercise, Personal Blog!
 
 - rake import:cash_date 我利用基本ruby語法和rake來試著加入一些記帳的資料。
 
-```ruby lib/task/cash_date.rake
+
+```ruby
 desc "Import my cash flow"
 task :import =>:environment do
 
@@ -75,5 +76,4 @@ task :import =>:environment do
 		r.save
 	end
 end
-
 ```
