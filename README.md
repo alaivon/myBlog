@@ -41,3 +41,9 @@ Hi, I'm Bill, this is one of projects for my exercise, Personal Blog!
 
  - Record amount:integer period:date details:string catalog_id:integer
 
+
+### Notes
+
+- rails 裡有一個url_for的method，他會return網址，以這次在posts/show.html.erb的share icon為例，only_path屬性如果設定為true，會回傳相對位址的url，所以設定為false，但因為在是RESTful resource，所以我可以把url_for，改成 post_url， 傳回的就是完完整整的絕對位置的url。(經爬文，url_for 不支援rails 3.1以後的版本，rails4改成polymorphic_url)
+
+
