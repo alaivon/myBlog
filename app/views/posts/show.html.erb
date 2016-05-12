@@ -25,7 +25,7 @@
         <p><%= markdown(@post.content) %></p> <br>
         <div class="share text-center">
         <p class="share_icon">Shared this post</p>
-          <a onclick="javascript:window.open('https://www.facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook-square fa-2x" id="facebook"></i></a>
+          <a onclick="javascript:window.open('https://www.facebook.com/sharer.php?u=<%= post_url([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook-square fa-2x" id="facebook"></i></a>
         <!-- Google Plus -->
         <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= post_url([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus-square fa-2x" id="google"></i></a>
         </div>
