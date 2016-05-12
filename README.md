@@ -46,4 +46,34 @@ Hi, I'm Bill, this is one of projects for my exercise, Personal Blog!
 
 - rails 裡有一個url_for的method，他會return網址，以這次在posts/show.html.erb的share icon為例，only_path屬性如果設定為true，會回傳相對位址的url，所以設定為false，但因為在是RESTful resource，所以我可以把url_for，改成 post_url， 傳回的就是完完整整的絕對位置的url。(經爬文，url_for 不支援rails 3.1以後的版本，rails4改成polymorphic_url)
 
+- rake import:cash_date 我利用基本ruby語法和rake來試著加入一些記帳的資料。
 
+```ruby lib/task/cash_date.rake
+desc "Import my cash flow"
+task :import =>:environment do
+
+	record_date = []
+	amount = [200,250,120,100,60,90,1000,1200,530,210,120,100,100,140,170,200,160]
+	kind = ["dinner", "lunch", "Living Expense", "Some books", "drink", "Basic Expense", "Movie and Food", "Oil", "dinner", "lunch", "Food", "breakfast", "dinner", "lunch"]
+	Date.new(2016,4,1).upto(Date.new(2016,4,26)) do |x|
+	  record_date << x
+	end
+
+	record_info = []
+	i = 0
+	while i < record_date.length-1
+		record_info << [record_date.sample, kind.sample, amount.sample]
+		i = i + 1
+	end
+
+	record_info.each do |period, kind, amount|
+		r = Record.new
+		r.period = period
+		r.details  = kind
+		r.amount = amount
+		r.catalog_id =  1
+		r.save
+	end
+end
+
+```
