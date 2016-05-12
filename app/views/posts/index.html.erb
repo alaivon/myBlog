@@ -7,7 +7,7 @@
 			<div class="post-preview">
         <% @posts.each do |post| %>
           <a href=<%= post_path(post) %>><h2 class="post-title"><%= post.title %></h2></a>
-          <h3 class="post-subtitle"><%= markdown(truncate(post.content, length: 50)) %></h3>
+          
           <p class="post-meta">Posted by <%= link_to "Bill Hung", "#"  %> on <%= render_datetime(post.post_date) %></p> <hr>	
         <% end %>
       </div>
