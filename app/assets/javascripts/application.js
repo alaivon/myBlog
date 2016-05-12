@@ -17,11 +17,6 @@
 //= require_tree .
 
 $(document).ready(function(){
-  $('#twitter').on('click', function(event) {
-    event.stopPropagation();
-    event.preventDefault();
-    alert("I don't have twitter account, haha~");
-  });
 	$(function(){
 	  $('#post_post_date').datepicker({
 	  dateFormat: 'yy-mm-dd'
