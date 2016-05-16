@@ -4,7 +4,7 @@ https://billblog2016.herokuapp.com
 
 ### User Story
 
-1. As a user, I want to be able to create posts and share.
+1. As a user, I want to be able to create posts and share by FB & Google Plus.
 
 2. As a user, I want to be able to edit & destroy posts, so that I can  manage my blog.(But I won't set the limit here)
 
@@ -26,7 +26,7 @@ https://billblog2016.herokuapp.com
 
 - [pygments.rb](https://github.com/tmm1/pygments.rb), syntax Highlighter
 
-- [redcarpet](https://github.com/vmg/redcarpet), Ruby library for Markdown 
+- [redcarpet](https://github.com/vmg/redcarpet), Ruby library for Markdown
 
 - [mail_form](https://github.com/plataformatec/mail_form), Send e-mail straight from forms.
 
